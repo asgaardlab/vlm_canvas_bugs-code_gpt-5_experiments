@@ -4,6 +4,7 @@ version = "0.0.1"
 description = "Replication package for the paper 'Exploring the Capabilities of VLMs to Detect Visual Bugs in HTML5 Canvas Applications.'"
 authors = ["Finlay Macklon"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"

@@ -6,6 +6,8 @@
 **/.mypy_cache
 **/dist
 .env
+.conda
+.venv
 
 
 # Custom paths to ignore
@@ -13,3 +15,4 @@ Data
 1c-Injecting_Visual_Bugs/investigation/wiki
 1c-Injecting_Visual_Bugs/investigation/understanding_pixi/buildCallGraph.js
 3-Results/*.pdf
+sqlite
