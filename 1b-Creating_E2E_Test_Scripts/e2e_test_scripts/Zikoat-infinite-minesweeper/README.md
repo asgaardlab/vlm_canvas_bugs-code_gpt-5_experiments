@@ -32,10 +32,10 @@
 In ``` around line 44:
 
 ```
-	const app = new PIXI.Application({
-	  resizeTo: window,
-	  backgroundColor: 0x1099bb,
-	});
+    const app = new PIXI.Application({
+      resizeTo: window,
+      backgroundColor: 0x1099bb,
+    });
 
-+	window.__PIXI_APP__ = app;
++    window.__PIXI_APP__ = app;
 ```

@@ -58,22 +58,22 @@ cd ..
 In `src/editor/EditorRoot.tsx` around Line 33:
 
 ```
-	export function EditorRoot() {
-	    const ref = useRef<HTMLDivElement>(null);
-	    const state = useStore();
-	    const {classes} = useStyles();
-	    useEffect(() => {
-	        
-	        // On first render create our application
-	        const app = new Application({
-	            view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
-	            resolution: window.devicePixelRatio || 1,
-	            autoDensity: true,
-	            backgroundColor: 0xebebeb,
-	            antialias: true,
-	            resizeTo: window
-	        });
+    export function EditorRoot() {
+        const ref = useRef<HTMLDivElement>(null);
+        const state = useStore();
+        const {classes} = useStyles();
+        useEffect(() => {
+            
+            // On first render create our application
+            const app = new Application({
+                view: document.getElementById("pixi-canvas") as HTMLCanvasElement,
+                resolution: window.devicePixelRatio || 1,
+                autoDensity: true,
+                backgroundColor: 0xebebeb,
+                antialias: true,
+                resizeTo: window
+            });
 
-+	        (window as any).__PIXI_APP__ = app;
++            (window as any).__PIXI_APP__ = app;
 
 ```

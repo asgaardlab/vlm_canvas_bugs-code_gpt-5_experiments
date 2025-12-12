@@ -40,21 +40,21 @@ By following these steps, you successfully set up your project environment, allo
 In file: `ts/Applications.ts` around line 22:
 
 ```
-	export class Application {
-	    private readonly app: PIXI.Application;
-	    private readonly state: GameState;
-	    private readonly renderer: Renderer;
-	    private readonly ticker: PIXI.Ticker;
+    export class Application {
+        private readonly app: PIXI.Application;
+        private readonly state: GameState;
+        private readonly renderer: Renderer;
+        private readonly ticker: PIXI.Ticker;
 
-	    private constructor(canvas: HTMLCanvasElement, resources: Record<string, any>) {
-	        this.app = new PIXI.Application({
-	            width: CANVAS_WIDTH,
-	            height: CANVAS_HEIGHT,
-	            backgroundAlpha: 0,
-	            antialias: true,
-	            view: canvas
-	        });
-	        //@ts-ignore
-+	        window.__PIXI_APP__ = this.app;
+        private constructor(canvas: HTMLCanvasElement, resources: Record<string, any>) {
+            this.app = new PIXI.Application({
+                width: CANVAS_WIDTH,
+                height: CANVAS_HEIGHT,
+                backgroundAlpha: 0,
+                antialias: true,
+                view: canvas
+            });
+            //@ts-ignore
++            window.__PIXI_APP__ = this.app;
 
 ```

@@ -6,7 +6,7 @@ Framework for collecting bug-injected and bug-free screenshots paired with their
 
 - Collect screenshots from a [PixiJS](https://github.com/pixijs/pixijs) application
 
-	- Each screenshot is paired with its associated Canvas Objects Representation (COR) from the same state
+    - Each screenshot is paired with its associated Canvas Objects Representation (COR) from the same state
 
 - Supports automated test scripts written with [Playwright](https://playwright.dev/) in [TypeScript](https://www.typescriptlang.org/)
 
@@ -38,9 +38,9 @@ Collect snapshots by instrumenting automated end-to-end (e2e) test scripts
 
 - The client-side code of PixiSnapshotCollector requires that either `PIXI` or `__PIXI_APP__` be available in the global scope of the browser in which the client code executes
 
-	- `PIXI` would be from something like `import * as PIXI from "pixi.js"` and made available through `window.PIXI = PIXI;`
+    - `PIXI` would be from something like `import * as PIXI from "pixi.js"` and made available through `window.PIXI = PIXI;`
 
-	- `__PIXI_APP__` could be set like `window.__PIXI_APP__ = app;` assuming that `app = new PIXI.Application`
+    - `__PIXI_APP__` could be set like `window.__PIXI_APP__ = app;` assuming that `app = new PIXI.Application`
 
 __Importing:__
 
@@ -103,12 +103,12 @@ See [`../1b-Creating_E2E_Test_Scripts/e2e_test_scripts/`](../1b-Creating_E2E_Tes
 2. Once running the app, open a new terminal tab/window, navigate to the root directory (`vlm_canvas_bugs-code`), and run `npm run build`
 
 3. Next, in the same terminal tab/window, enter the command `npm run test:sample:$TYPE_OF_SAMPLE:$NAME_OF_APP` from the root directory of this repository.
-	- `$TYPE_OF_SAMPLE` could be:
-		- `clean`: Normal snapshot without any bugs
-		- `bug-state`: State bug
-		- `bug-layout`: Layout bug
-		- `bug-rendering`: Rendering bug
-		- `bug-appearance`: Appearance bug
+    - `$TYPE_OF_SAMPLE` could be:
+        - `clean`: Normal snapshot without any bugs
+        - `bug-state`: State bug
+        - `bug-layout`: Layout bug
+        - `bug-rendering`: Rendering bug
+        - `bug-appearance`: Appearance bug
 
 4. Then, to parse the snapshot into a clean, consistent format, enter the command `npm run test:parse:$TYPE_OF_SAMPLE:$NAME_OF_APP`
 

@@ -27,47 +27,47 @@ In file `src/renderer/Renderer.ts` around line 140-150
 
 Insert as follows:
 ```
-  	public constructor({
-	    gridWidth,
-	    gridHeight,
-	    tileWidth,
-	    tileHeight,
-	    appWidth,
-	    appHeight,
-	    backgroundColor,
-	    autoCenterEnabled,
-	}: RendererConfig) {
-	    this.gridWidth = gridWidth;
-	    this.gridHeight = gridHeight;
-	    this.tileWidth = tileWidth;
-	    this.tileHeight = tileHeight;
-	    this.app = new PIXI.Application({
-	      width: appWidth,
-	      height: appHeight,
-	      backgroundColor: hexToNumber(backgroundColor),
-	      antialias: false,
-	    });
-	    this.app.ticker.maxFPS = 30;
-	    this.autoCenterEnabled = Boolean(autoCenterEnabled);
+      public constructor({
+        gridWidth,
+        gridHeight,
+        tileWidth,
+        tileHeight,
+        appWidth,
+        appHeight,
+        backgroundColor,
+        autoCenterEnabled,
+    }: RendererConfig) {
+        this.gridWidth = gridWidth;
+        this.gridHeight = gridHeight;
+        this.tileWidth = tileWidth;
+        this.tileHeight = tileHeight;
+        this.app = new PIXI.Application({
+          width: appWidth,
+          height: appHeight,
+          backgroundColor: hexToNumber(backgroundColor),
+          antialias: false,
+        });
+        this.app.ticker.maxFPS = 30;
+        this.autoCenterEnabled = Boolean(autoCenterEnabled);
 
-	    this.viewport.destroy();
-	    this.viewport = new Viewport({
-	      screenWidth: appWidth,
-	      screenHeight: appHeight,
-	      worldWidth: gridWidth * tileWidth,
-	      worldHeight: gridHeight * tileHeight,
-	      interaction: this.app.renderer.plugins.interaction,
-	    });
-	    this.viewport.sortableChildren = true;
-	    this.app.stage.addChild(this.viewport);
-	    if (this.autoCenterEnabled) {
-	      this.viewport
-	        .wheel({ smooth: 10 })
-	        .on("moved", () =>
-	          this.viewportChangedListeners.forEach((listener) => listener())
-	        );
-	    }
-+   	window.__PIXI_APP__ = {};
-+   	Object.assign(window.__PIXI_APP__, this.app);
+        this.viewport.destroy();
+        this.viewport = new Viewport({
+          screenWidth: appWidth,
+          screenHeight: appHeight,
+          worldWidth: gridWidth * tileWidth,
+          worldHeight: gridHeight * tileHeight,
+          interaction: this.app.renderer.plugins.interaction,
+        });
+        this.viewport.sortableChildren = true;
+        this.app.stage.addChild(this.viewport);
+        if (this.autoCenterEnabled) {
+          this.viewport
+            .wheel({ smooth: 10 })
+            .on("moved", () =>
+              this.viewportChangedListeners.forEach((listener) => listener())
+            );
+        }
++       window.__PIXI_APP__ = {};
++       Object.assign(window.__PIXI_APP__, this.app);
   }
 ```

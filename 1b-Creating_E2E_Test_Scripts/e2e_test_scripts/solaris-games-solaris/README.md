@@ -63,23 +63,23 @@ By following these steps, you should be able to run the `solaris-games-solaris` 
 Around line 87 in `client/src/game/container.js`, update as follows:
 
 ```
-	  setupApp (store, userSettings) {
-	    this.store = store
+      setupApp (store, userSettings) {
+        this.store = store
 
-	    // Cleanup if the app already exists.
-	    this.destroy()
+        // Cleanup if the app already exists.
+        this.destroy()
 
-	    let antialiasing = userSettings.map.antiAliasing === 'enabled';
+        let antialiasing = userSettings.map.antiAliasing === 'enabled';
 
-	    this.app = new PIXI.Application({
-	      width: window.innerWidth, // window.innerWidth,
-	      height: window.innerHeight, // window.innerHeight,
-	      backgroundColor: 0x000000, // black hexadecimal
-	      resolution: window.devicePixelRatio || 1,
-	      antialias: antialiasing,
-	      autoResize: true,
-	      autoDensity: true,
-	    })
+        this.app = new PIXI.Application({
+          width: window.innerWidth, // window.innerWidth,
+          height: window.innerHeight, // window.innerHeight,
+          backgroundColor: 0x000000, // black hexadecimal
+          resolution: window.devicePixelRatio || 1,
+          antialias: antialiasing,
+          autoResize: true,
+          autoDensity: true,
+        })
 
-+	    window.__PIXI_APP__ = this.app;
++        window.__PIXI_APP__ = this.app;
 ```

@@ -195,16 +195,16 @@ See [2-Experiments/README.md](2-Experiments/README.md) for more details.
 
 ##### Mapping from variable names used here to ones in the paper:
 
-| Prompting strategy name in paper | Bash script call      	| Variable name in code                                                | Enumerable name in code                      |
-|-----------------------------------|-----------------------	|----------------------------------------------------------------------|---------------------------------------------|
-| *NoContext*                       | ./run_vlm_analysis.sh v0	| "v0_baseline"                                                          | BASELINE                                    |
-| (not used in paper)               | ./run_vlm_analysis.sh v1	| "v1_describe_task"                                                     | DESCRIBE_TASK                               |
-| *README+BugDescriptions*          | ./run_vlm_analysis.sh v2	| "v2_describe_task_and_provide_readme"                                  | DESCRIBE_TASK_AND_PROVIDE_README            |
-| *README*                          | ./run_vlm_analysis.sh v2a	| "v2a_baseline_and_provide_readme"                                      | BASELINE_AND_PROVIDE_README                 |
-| (not used in paper)               | ./run_vlm_analysis.sh v3	| "v3_describe_task_and_provide_readme_plus_verified_sample"             | DESCRIBE_TASK_AND_PROVIDE_VERIFIED_SAMPLE   |
-| *AllContextExceptAssets*          | ./run_vlm_analysis.sh v3a	| "v3a_describe_task_and_provide_readme_plus_mock_verified_sample"       | DESCRIBE_TASK_AND_PROVIDE_MOCK_VERIFIED_SAMPLE |
-| (not used in paper)               | ./run_vlm_analysis.sh v4	| "v4_describe_task_and_provide_readme_plus_assets"                      | DESCRIBE_TASK_AND_PROVIDE_ASSETS            |
-| *AllContext*                      | ./run_vlm_analysis.sh v5	| "v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets" | DESCRIBE_TASK_AND_PROVIDE_COMBINED_CONTEXT  |
+| Prompting strategy name in paper | Bash script call          | Variable name in code                                                | Enumerable name in code                      |
+|-----------------------------------|-----------------------    |----------------------------------------------------------------------|---------------------------------------------|
+| *NoContext*                       | ./run_vlm_analysis.sh v0    | "v0_baseline"                                                          | BASELINE                                    |
+| (not used in paper)               | ./run_vlm_analysis.sh v1    | "v1_describe_task"                                                     | DESCRIBE_TASK                               |
+| *README+BugDescriptions*          | ./run_vlm_analysis.sh v2    | "v2_describe_task_and_provide_readme"                                  | DESCRIBE_TASK_AND_PROVIDE_README            |
+| *README*                          | ./run_vlm_analysis.sh v2a    | "v2a_baseline_and_provide_readme"                                      | BASELINE_AND_PROVIDE_README                 |
+| (not used in paper)               | ./run_vlm_analysis.sh v3    | "v3_describe_task_and_provide_readme_plus_verified_sample"             | DESCRIBE_TASK_AND_PROVIDE_VERIFIED_SAMPLE   |
+| *AllContextExceptAssets*          | ./run_vlm_analysis.sh v3a    | "v3a_describe_task_and_provide_readme_plus_mock_verified_sample"       | DESCRIBE_TASK_AND_PROVIDE_MOCK_VERIFIED_SAMPLE |
+| (not used in paper)               | ./run_vlm_analysis.sh v4    | "v4_describe_task_and_provide_readme_plus_assets"                      | DESCRIBE_TASK_AND_PROVIDE_ASSETS            |
+| *AllContext*                      | ./run_vlm_analysis.sh v5    | "v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets" | DESCRIBE_TASK_AND_PROVIDE_COMBINED_CONTEXT  |
 
 
 ## Code structure of this repository

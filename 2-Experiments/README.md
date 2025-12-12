@@ -42,13 +42,13 @@ Running all prompting strategies in our code over all 100 screenshots (8x100) co
 
 3. Then, if using the poetry installation, activate the venv with `poetry shell` (or prepend `poetry run` to all `python3` commands)
 
-	- Otherwise:
-		- Activate your virtual environment as required (probably `source ./venv/bin/activate`) 
-		- (or don't activate one if you installed dependencies into your system Python)
+    - Otherwise:
+        - Activate your virtual environment as required (probably `source ./venv/bin/activate`) 
+        - (or don't activate one if you installed dependencies into your system Python)
 
 4. Next, move into the `2-Experiments` directory by running:
 
-	`cd 2-Experiments`
+    `cd 2-Experiments`
 
 5. Finally, you can run either:
 
@@ -130,18 +130,18 @@ Pick from:
 
 ##### Mapping from variable names used here to ones in the paper:
 
-| Prompting strategy name in paper | Bash script argument      	| Variable name in code                                                | Enumerable name in code                      |
-|-----------------------------------|-----------------------	|----------------------------------------------------------------------|---------------------------------------------|
-| *NoContext*                       | `v0`	| "v0_baseline"                                                          | BASELINE                                    |
-| (not used in paper)               | `v1`	| "v1_describe_task"                                                     | DESCRIBE_TASK                               |
-| *README+BugDescriptions*          | `v2`	| "v2_describe_task_and_provide_readme"                                  | DESCRIBE_TASK_AND_PROVIDE_README            |
-| *README*                          | `v2a`	| "v2a_baseline_and_provide_readme"                                      | BASELINE_AND_PROVIDE_README                 |
-| (not used in paper)               | `v3`	| "v3_describe_task_and_provide_readme_plus_verified_sample"             | DESCRIBE_TASK_AND_PROVIDE_VERIFIED_SAMPLE   |
-| *AllContextExceptAssets*          | `v3a`	| "v3a_describe_task_and_provide_readme_plus_mock_verified_sample"       | DESCRIBE_TASK_AND_PROVIDE_MOCK_VERIFIED_SAMPLE |
-| (not used in paper)               | `v4`	| "v4_describe_task_and_provide_readme_plus_assets"                      | DESCRIBE_TASK_AND_PROVIDE_ASSETS            |
-| *AllContext*                      | `v5`	| "v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets" | DESCRIBE_TASK_AND_PROVIDE_COMBINED_CONTEXT  |
-| *README(Good)* (for ablation study)   | `vX2a1`	| "vX2a1_ablation_study_readme_has_the_good_part" 				| ABLATION_STUDY_README_HAS_THE_GOOD_PART  |
-| *README(Bad)*  (for ablation study)  	| `vX2a2`	| "vX2a2_ablation_study_readme_has_the_bad_part" 				| ABLATION_STUDY_README_HAS_THE_BAD_PART  |
+| Prompting strategy name in paper | Bash script argument          | Variable name in code                                                | Enumerable name in code                      |
+|-----------------------------------|-----------------------    |----------------------------------------------------------------------|---------------------------------------------|
+| *NoContext*                       | `v0`    | "v0_baseline"                                                          | BASELINE                                    |
+| (not used in paper)               | `v1`    | "v1_describe_task"                                                     | DESCRIBE_TASK                               |
+| *README+BugDescriptions*          | `v2`    | "v2_describe_task_and_provide_readme"                                  | DESCRIBE_TASK_AND_PROVIDE_README            |
+| *README*                          | `v2a`    | "v2a_baseline_and_provide_readme"                                      | BASELINE_AND_PROVIDE_README                 |
+| (not used in paper)               | `v3`    | "v3_describe_task_and_provide_readme_plus_verified_sample"             | DESCRIBE_TASK_AND_PROVIDE_VERIFIED_SAMPLE   |
+| *AllContextExceptAssets*          | `v3a`    | "v3a_describe_task_and_provide_readme_plus_mock_verified_sample"       | DESCRIBE_TASK_AND_PROVIDE_MOCK_VERIFIED_SAMPLE |
+| (not used in paper)               | `v4`    | "v4_describe_task_and_provide_readme_plus_assets"                      | DESCRIBE_TASK_AND_PROVIDE_ASSETS            |
+| *AllContext*                      | `v5`    | "v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets" | DESCRIBE_TASK_AND_PROVIDE_COMBINED_CONTEXT  |
+| *README(Good)* (for ablation study)   | `vX2a1`    | "vX2a1_ablation_study_readme_has_the_good_part"                 | ABLATION_STUDY_README_HAS_THE_GOOD_PART  |
+| *README(Bad)*  (for ablation study)      | `vX2a2`    | "vX2a2_ablation_study_readme_has_the_bad_part"                 | ABLATION_STUDY_README_HAS_THE_BAD_PART  |
 
 
 #### Examples

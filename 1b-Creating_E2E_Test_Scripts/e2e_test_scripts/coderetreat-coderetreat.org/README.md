@@ -72,30 +72,30 @@ npm run serve
 In `js/gameOfLifeJumbotron/GraphicsController.ts` around line 39
 
 ```ts
-	export class GraphicsController {
-	  pixiApp: PIXI.Application;
-	  visibleDots: Array2d<PIXI.Graphics>;
-	  gap: number;
-	  radius: number;
-	  fadeFactor: number | false;
-	  viewport: any;
+    export class GraphicsController {
+      pixiApp: PIXI.Application;
+      visibleDots: Array2d<PIXI.Graphics>;
+      gap: number;
+      radius: number;
+      fadeFactor: number | false;
+      viewport: any;
 
-	  constructor({
-	    element,
-	    fps,
-	    radius,
-	    fadeFactor,
-	    gap,
-	  }: GraphicsControllerOpts) {
-	    this.pixiApp = new PIXI.Application({
-	      view: element,
-	      resizeTo: element.parentElement!,
-	      backgroundAlpha: 0.0,
-	      antialias: true,
-	      autoDensity: true,
-	      resolution: 2,
-	      autoStart: false,
-	    });
+      constructor({
+        element,
+        fps,
+        radius,
+        fadeFactor,
+        gap,
+      }: GraphicsControllerOpts) {
+        this.pixiApp = new PIXI.Application({
+          view: element,
+          resizeTo: element.parentElement!,
+          backgroundAlpha: 0.0,
+          antialias: true,
+          autoDensity: true,
+          resolution: 2,
+          autoStart: false,
+        });
 
-+	    window.__PIXI_APP__ = this.pixiApp;
++        window.__PIXI_APP__ = this.pixiApp;
 ```

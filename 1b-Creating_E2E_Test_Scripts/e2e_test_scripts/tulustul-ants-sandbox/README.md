@@ -25,11 +25,11 @@ In the file: `src/canvas/canvas.ts`
 
 Add `window.__PIXI_APP__ = this.app` around line 14/15 as follows:
 ```
-	      resizeTo: window,
-	      backgroundColor: 0x111111,
-	    });
-+	    window.__PIXI_APP__ = this.app
-	    this.camera = new Camera(this);
-	  }
-	}
+          resizeTo: window,
+          backgroundColor: 0x111111,
+        });
++        window.__PIXI_APP__ = this.app
+        this.camera = new Camera(this);
+      }
+    }
 ```

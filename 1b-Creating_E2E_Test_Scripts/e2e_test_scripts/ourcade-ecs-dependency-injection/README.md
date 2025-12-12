@@ -44,27 +44,27 @@ This document outlines the steps to quickly set up and run the project with PIXI
 Update `src/pixi/main.ts` as follows:
 
 ```
-	import { createChildContainer } from '../container'
-	import { StartGame } from '../tokens'
+    import { createChildContainer } from '../container'
+    import { StartGame } from '../tokens'
 
-	import { registerBindings, registerInjections } from './register'
-	import { App, Loop } from './tokens'
+    import { registerBindings, registerInjections } from './register'
+    import { App, Loop } from './tokens'
 
-	const container = createChildContainer()
+    const container = createChildContainer()
 
-	registerInjections()
-	registerBindings(container)
+    registerInjections()
+    registerBindings(container)
 
-	const app = container.get(App)
-	const loop = container.get(Loop)
-	const startGame = container.get(StartGame)
+    const app = container.get(App)
+    const loop = container.get(Loop)
+    const startGame = container.get(StartGame)
 
-	app.ticker.add((dt) => {
-		loop(dt)
-	})
+    app.ticker.add((dt) => {
+        loop(dt)
+    })
 
-	startGame()
+    startGame()
 
-	document.getElementById('app')?.appendChild(app.view)
-+	window.__PIXI_APP__ = app;
+    document.getElementById('app')?.appendChild(app.view)
++    window.__PIXI_APP__ = app;
 ```

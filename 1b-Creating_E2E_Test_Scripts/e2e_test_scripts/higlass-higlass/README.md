@@ -48,34 +48,34 @@ This Quick Start will help you quickly set up and run the Higlass project. Follo
 In `app/scripts/HiGlassComponent.jsx` around Line 544, update as follows:
 
 ```
-	    const versionNumber = parseInt(PIXI.VERSION[0], 10);
+        const versionNumber = parseInt(PIXI.VERSION[0], 10);
 
-	    if (versionNumber === 4) {
-	      console.warn(
-	        'Deprecation warning: please update Pixi.js to version 5 or above!',
-	      );
-	      if (this.props.options.renderer === 'canvas') {
-	        this.pixiRenderer = new GLOBALS.PIXI.CanvasRenderer(rendererOptions);
-	      } else {
-	        this.pixiRenderer = new GLOBALS.PIXI.WebGLRenderer(rendererOptions);
-	      }
+        if (versionNumber === 4) {
+          console.warn(
+            'Deprecation warning: please update Pixi.js to version 5 or above!',
+          );
+          if (this.props.options.renderer === 'canvas') {
+            this.pixiRenderer = new GLOBALS.PIXI.CanvasRenderer(rendererOptions);
+          } else {
+            this.pixiRenderer = new GLOBALS.PIXI.WebGLRenderer(rendererOptions);
+          }
 
-	    } else {
-	      if (versionNumber < 4) {
-	        console.warn(
-	          'Deprecation warning: please update Pixi.js to version 5 or above! ' +
-	            'This version of Pixi.js is unsupported. Good luck 🤞',
-	        );
-	      }
+        } else {
+          if (versionNumber < 4) {
+            console.warn(
+              'Deprecation warning: please update Pixi.js to version 5 or above! ' +
+                'This version of Pixi.js is unsupported. Good luck 🤞',
+            );
+          }
 
-	      if (this.props.options.renderer === 'canvas') {
-	        this.pixiRenderer = new GLOBALS.PIXI.CanvasRenderer(rendererOptions);
-	      } else {
-	        this.pixiRenderer = new GLOBALS.PIXI.Renderer(rendererOptions);
-	      }
-	    }
+          if (this.props.options.renderer === 'canvas') {
+            this.pixiRenderer = new GLOBALS.PIXI.CanvasRenderer(rendererOptions);
+          } else {
+            this.pixiRenderer = new GLOBALS.PIXI.Renderer(rendererOptions);
+          }
+        }
 
-+	    this.stage = this.pixiStage;
-+	    this.renderer = this.pixiRenderer;
-+   	window.__PIXI_APP__ = this;
++        this.stage = this.pixiStage;
++        this.renderer = this.pixiRenderer;
++       window.__PIXI_APP__ = this;
 ```

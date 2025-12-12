@@ -36,9 +36,9 @@ async function test(snapshotName:string, portNumber:number, isDebugMode:boolean,
     // Create exposer for current page
     let sampler;
     if (isDebugMode) {
-	   sampler = new PixiVisualBugsPlaywrightDebug(page, SNAPSHOTS_PATH);
+       sampler = new PixiVisualBugsPlaywrightDebug(page, SNAPSHOTS_PATH);
     } else {
-	   sampler = new PixiVisualBugsPlaywright(page, SNAPSHOTS_PATH);
+       sampler = new PixiVisualBugsPlaywright(page, SNAPSHOTS_PATH);
     }
     // Open the demo URL
     await page.goto(urlDemo);

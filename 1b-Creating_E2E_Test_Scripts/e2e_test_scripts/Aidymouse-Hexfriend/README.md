@@ -23,13 +23,13 @@
 
 In file `./src/App.svelte`, around line 176
 ```
-	/* APPLICATION */
-	let app = new PIXI.Application({
-		backgroundAlpha: 0,
-		width: window.innerWidth,
-		height: window.innerHeight,
-		resizeTo: window,
-	});
+    /* APPLICATION */
+    let app = new PIXI.Application({
+        backgroundAlpha: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+        resizeTo: window,
+    });
 
-+	window.__PIXI_APP__ = app;
++    window.__PIXI_APP__ = app;
 ```

@@ -39,10 +39,10 @@ This will allow you to access the level editor for the game BombHopper.io.
 In `src/app.ts` around line 17 modify as follows:
 
 ```
-	const app = new Application({
-		backgroundColor: 0x121f1f,
-		resizeTo: pixiContainer,
-	});
+    const app = new Application({
+        backgroundColor: 0x121f1f,
+        resizeTo: pixiContainer,
+    });
 
-+	(window as any).__PIXI_APP__ = app;
++    (window as any).__PIXI_APP__ = app;
 ```
