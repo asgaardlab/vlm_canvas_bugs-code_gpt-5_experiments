@@ -14,7 +14,7 @@
 #   ./run_vlm_analysis.sh vX2a2
 #
 
-MODEL_API="openai:gpt-4o-2024-08-06"
+MODEL_API="openai:gpt-5-mini-2025-08-07"
 
 # to be extra safe, filter out these app names from the analysis
 # (shouldn't be in ../Data/1d-Collecting_Screenshots/screenshots anyways)
