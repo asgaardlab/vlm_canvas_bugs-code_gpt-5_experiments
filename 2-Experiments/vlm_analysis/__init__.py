@@ -38,6 +38,8 @@ class ModelAPI(Enum):
 	# gpt-4o-2024-08-06 - Structured outputs available
 	OPENAI_GPT4O_2024_08_06 = "openai:gpt-4o-2024-08-06"
 
+	OPENAI_GPT5MINI_2025_08_07 = "openai:gpt-5-mini-2025-08-07"
+
 	# gpt-4o-2024-05-13 - Original GPT-4o
 	# OPENAI_GPT4O_2024_05_13 = "openai:gpt-4o-2024-05-13"
 
