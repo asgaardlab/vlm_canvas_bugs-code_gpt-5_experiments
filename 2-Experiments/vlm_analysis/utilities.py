@@ -187,7 +187,7 @@ def make_list_of_message_dicts_with_images(list_of_tuples_of_prompts_and_base64_
 
 	for string_role, string_prompt, base64_screenshot_canvas in list_of_tuples_of_prompts_and_base64_images:
 
-		content: Union[list[dict], dict] = dict()
+		content: list[dict] = list()
 
 		text_content = {
 			"type": "text",
@@ -207,7 +207,7 @@ def make_list_of_message_dicts_with_images(list_of_tuples_of_prompts_and_base64_
 			]
 
 		else:
-			content = text_content
+			content = [text_content]
 
 		message_dict = {
 			"role": string_role,
