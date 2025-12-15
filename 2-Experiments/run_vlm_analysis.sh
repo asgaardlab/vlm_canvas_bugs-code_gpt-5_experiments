@@ -70,7 +70,7 @@ case "$1" in
         ;;
 
     "v5")
-        prompt_strategy ="v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets"
+        prompt_strategy="v5_describe_task_and_provide_readme_plus_mock_verified_sample_plus_assets"
         ;;
 
     "vX2a1")
